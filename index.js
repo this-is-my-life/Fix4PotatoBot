@@ -30,9 +30,9 @@ bot.on("message", async message => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if(cmd === `${prefix}도움`){
+    if(cmd === `${prefix} 도움`){
         let bicon = bot.user.displayAvatarURL;
-        let botembed = new.Discord.RichEmbed()
+        let botembed = new Discord.RichEmbed()
         .setDescription("도움말")
         .setColor("#33cc33")
         .addFiled("나를 부르는 방법 : `감자야` \n지원 서버 : https://discord.gg/TBe9Zcx \n페이스북 : https://www.facebook.com/potato179 https://www.facebook.com/potato1798 \n\n<기본> \n`도움`, `안녕`, `잘 가`, `핑` \n*이 외에도 많은 명령어가 있습니다!!* \n\n<음악> \n`음악 (곡 명 또는 URL)` : 음악 플레이, `스킵` : 건너뛰기, `정지` : 일시정지, `목록` : 재생 목록 \n\n<관리(`관리자` 권한을 가진 사람부터 사용 가능) \n`경고 (@맨션) (이유)` : 유저 경고, `강퇴 (@맨션) (이유)` : 유저 강제 퇴장, `영정(@맨션) (이유)` : 유저 영구 정지");
