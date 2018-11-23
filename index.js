@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client({disableEveryone : true});
+const bot = new Discord.Client({disableEveryone: true});
 const ytdl = require("ytdl-core");
 const request = require("request");
 const fs = require("fs");
@@ -19,13 +19,13 @@ bot.login(discord_token);
 
 bot.on("ready", async() => {
     console.log(`작동 성공!!!`);
-    bot.user.setActivity("감자야 도움 ㄱㄱㄱ")
+    bot.user.setActivity("감자야 도움 ㄱㄱㄱ", {type: "WATCHING"})
 });
 
 bot.on("message", async message => {
     if (message.channel.type === "dm") return;
 
-    let prefix = config.prefix;
+    let prefix = botconfig.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
