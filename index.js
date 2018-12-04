@@ -11,7 +11,7 @@ var config = require("./settings.json");
 const yt_api_key = config.yt_api_key;
 const bot_controller = config.bot_controller;
 const prefix = config.prefix;
-const discord_token = config.discord_token;
+const discord_token = process.env.token || config.discord_token;
 
 var guilds = {};
 
